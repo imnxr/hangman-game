@@ -3,66 +3,74 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Responsive](https://img.shields.io/badge/Responsive-16%3A9%20Game%20Layout-4A63F4?style=for-the-badge)
+![Responsive](https://img.shields.io/badge/Responsive-16%3A9%20Layout-4A63F4?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-A portfolio-ready browser game built with HTML, CSS, and JavaScript. This project turns the classic Hangman idea into a more polished experience with a 100-level progression system, responsive widescreen layout, SVG-based visuals, starter clue letters, and unlockable hints.
+A browser-based Hangman game built with HTML, CSS, and JavaScript. This project expands the classic word-guessing format into a 100-level experience with progressive difficulty, starter clue letters, unlockable hints, and a responsive widescreen layout.
 
-## Live Demo
+## Play Online
 
-[Play the game](https://imnxr.github.io/hangman-game/)
+[Live Demo](https://imnxr.github.io/hangman-game/)
 
-The site is deployed with GitHub Pages through a GitHub Actions workflow.
+## About The Project
 
-If GitHub Pages was just enabled, the first deployment can take a few minutes to appear.
+This game was built as a complete front-end project rather than a basic Hangman exercise. The goal was to create a cleaner and more polished browser game experience with structured progression, readable code separation, and responsive UI behavior across different screen sizes.
 
-## Project Summary
+The gameplay starts with shorter easy words and gradually moves into longer and more difficult vocabulary. Each level begins with one or more clue letters already visible, and the player can unlock a hint after four wrong guesses. If the player reaches six wrong guesses, the level is lost and can be retried.
 
-This project was built to showcase front-end fundamentals through a complete mini game rather than a simple static page. The focus was on making the experience feel production-minded: structured game state, scalable level data, responsive layout behavior, separate code files, and a cleaner visual presentation suitable for a public portfolio.
+## Features
 
-## Why This Project Stands Out
-
-- Expands a familiar game concept into a 100-level playable experience
-- Uses progressive difficulty instead of random word selection
-- Includes a real gameplay loop with win, loss, retry, and level advancement states
-- Separates structure, styling, and logic into maintainable files
-- Adapts the interface for desktop, tablet, and mobile screens
-- Uses SVG for a crisp hangman scene without relying on images or canvas
-
-## Core Features
-
-- 100 hand-ordered levels with increasing difficulty
+- 100 hand-ordered levels
 - Four difficulty tiers: Easy, Medium, Hard, and Complex
-- Starter clue letters revealed at the beginning of each level
-- Hint system that unlocks after 4 wrong guesses
-- Red fail state when the player loses
+- Starter clue letters at the beginning of each round
+- Hint unlock after 4 incorrect guesses
+- Retry current level after a loss
 - Keyboard input support and on-screen controls
-- Retry system that keeps the player on the same level after a loss
-- Responsive 16:9 desktop presentation with stacked mobile layout
+- Responsive layout for desktop, tablet, and mobile
+- SVG-based hangman scene with a red fail state
 
 ## Gameplay
 
 1. Start a level and inspect the visible clue letters.
-2. Guess the hidden word one letter at a time.
-3. Avoid reaching 6 wrong guesses.
-4. Use the hint that appears after 4 mistakes.
-5. Clear the level to move to the next word.
+2. Guess the missing letters one at a time.
+3. Avoid reaching 6 incorrect guesses.
+4. Use the unlocked hint after 4 wrong guesses.
+5. Complete the word to move to the next level.
 
 ## Difficulty Progression
 
-- Levels 1-25: 3 to 4 letter easy words
-- Levels 26-50: 5 to 6 letter medium words
-- Levels 51-75: 7 to 8 letter hard words
-- Levels 76-100: 9+ letter complex words
+- Levels 1-25: 3 to 4 letter words
+- Levels 26-50: 5 to 6 letter words
+- Levels 51-75: 7 to 8 letter words
+- Levels 76-100: 9+ letter words
+
+## How It Was Built
+
+The project is split into separate files for structure, styling, and logic:
+
+- `index.html` contains the page structure and the SVG hangman scene
+- `style.css` contains layout, responsiveness, colors, and game UI styling
+- `script.js` contains the level data, game state, input handling, and rendering updates
+
+The JavaScript logic is driven by level objects that store both a `word` and a `hint`. The UI updates dynamically based on the current level, guessed letters, number of mistakes, and win/loss state.
 
 ## Tech Stack
 
 - HTML5
 - CSS3
 - Vanilla JavaScript
-- SVG for the hangman illustration
-- GitHub Pages for deployment
-- GitHub Actions for automated publishing
+- SVG
+- GitHub Pages
+- GitHub Actions
+
+## Technical Highlights
+
+- Structured level data for 100 levels
+- Game-state driven rendering
+- Dynamic keyboard generation and input handling
+- Viewport-based sizing for a less crowded desktop layout
+- Media queries for responsive behavior on smaller screens
+- Separate files for maintainability and cleaner project structure
 
 ## Project Structure
 
@@ -74,76 +82,10 @@ hangman-game/
 `- .github/workflows/deploy-pages.yml
 ```
 
-## Recommended Screenshots
-
-For a stronger portfolio presentation, add these images to the repository and include them in your GitHub project or portfolio website:
-
-1. Main gameplay screen
-Show the clean 16:9 game layout with the word board, hangman scene, and keyboard visible.
-
-2. Hint unlocked state
-Show a level after 4 wrong guesses so the hint panel is visible.
-
-3. Losing state
-Show the final red stickman fail state to highlight visual feedback and game-state transitions.
-
-4. Mobile responsive view
-Show the stacked layout on a phone-sized screen to demonstrate responsiveness.
-
-Recommended filenames:
-
-- `screenshot-desktop.png`
-- `screenshot-hint.png`
-- `screenshot-loss.png`
-- `screenshot-mobile.png`
-
-Recommended cover image text:
-
-`100-level Hangman web game built with HTML, CSS, and JavaScript`
-
-## Technical Highlights
-
-- Level content is stored in structured data objects with both `word` and `hint` values
-- Difficulty is derived from level index rather than a separate random system
-- Rendering is handled through reusable update functions for the board, keyboard, hint, and hangman state
-- Viewport-based sizing keeps the desktop frame shorter and more usable on smaller laptop screens
-- Media queries adjust layout, spacing, keyboard columns, and tile sizing for different devices
-
-## Controls
-
-- Click or tap letters on the on-screen keyboard
-- Press `A-Z` on the physical keyboard to guess
-- Press `Enter` to continue after a win or loss
-
-## Local Development
+## Run Locally
 
 Open `index.html` directly in a browser, or serve the folder with any static file server.
 
-## Portfolio Value
+## License
 
-This repository demonstrates:
-
-- Front-end UI layout and responsive design
-- DOM manipulation with vanilla JavaScript
-- State management for interactive gameplay
-- Clean separation of concerns across HTML, CSS, and JavaScript
-- Product thinking beyond a minimal tutorial-level implementation
-
-## Showcase Tips
-
-- Use the desktop gameplay screen as the GitHub social preview or project cover image
-- Put the live demo link near the top of your portfolio card or case study
-- Mention the 100-level progression because it makes the project sound more substantial
-- Highlight that the project was built with vanilla JavaScript rather than a framework
-- If you record a short demo, show the hint unlock and fail-state color change
-
-## Recommended GitHub Settings
-
-Repository description:
-`A responsive 100-level Hangman web game built with HTML, CSS, and JavaScript.`
-
-Homepage URL:
-`https://imnxr.github.io/hangman-game/`
-
-Suggested topics:
-`hangman`, `html5`, `javascript`, `css`, `browser-game`, `word-game`, `responsive-design`, `portfolio-project`
+This project is licensed under the MIT License.
