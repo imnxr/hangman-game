@@ -12,6 +12,8 @@ A portfolio-ready browser game built with HTML, CSS, and JavaScript. This projec
 
 [Play the game](https://imnxr.github.io/hangman-game/)
 
+The site is deployed with GitHub Pages through a GitHub Actions workflow.
+
 If GitHub Pages was just enabled, the first deployment can take a few minutes to appear.
 
 ## Project Summary
