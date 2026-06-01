@@ -6,7 +6,7 @@
 ![Responsive](https://img.shields.io/badge/Responsive-16%3A9%20Layout-4A63F4?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-A browser-based Hangman game built with HTML, CSS, and JavaScript. This project expands the classic word-guessing format into a 100-level experience with progressive difficulty, starter clue letters, unlockable hints, and a responsive widescreen layout.
+A browser-based Hangman game built with HTML, CSS, and JavaScript. This project expands the classic word-guessing format into a 100-level experience with progressive difficulty, starter clue letters, unlockable hints, and a desktop-first widescreen layout.
 
 ## Play Online
 
@@ -14,7 +14,7 @@ A browser-based Hangman game built with HTML, CSS, and JavaScript. This project 
 
 ## About The Project
 
-This game was built as a complete front-end project rather than a basic Hangman exercise. The goal was to create a cleaner and more polished browser game experience with structured progression, readable code separation, and responsive UI behavior across different screen sizes.
+This game was built as a complete front-end project rather than a basic Hangman exercise. The goal was to create a cleaner and more polished browser game experience with structured progression, readable code separation, and a stable desktop-style layout for browser play.
 
 The gameplay starts with shorter easy words and gradually moves into longer and more difficult vocabulary. Each level begins with one or more clue letters already visible, and the player can unlock a hint after four wrong guesses. If the player reaches six wrong guesses, the level is lost and can be retried.
 
@@ -26,7 +26,7 @@ The gameplay starts with shorter easy words and gradually moves into longer and 
 - Hint unlock after 4 incorrect guesses
 - Retry current level after a loss
 - Keyboard input support and on-screen controls
-- Responsive layout for desktop, tablet, and mobile
+- Desktop-first 16:9 layout for browser play
 - SVG-based hangman scene with a red fail state
 
 ## Gameplay
@@ -49,7 +49,7 @@ The gameplay starts with shorter easy words and gradually moves into longer and 
 The project is split into separate files for structure, styling, and logic:
 
 - `index.html` contains the page structure and the SVG hangman scene
-- `style.css` contains layout, responsiveness, colors, and game UI styling
+- `style.css` contains layout, colors, and game UI styling
 - `script.js` contains the level data, game state, input handling, and rendering updates
 
 The JavaScript logic is driven by level objects that store both a `word` and a `hint`. The UI updates dynamically based on the current level, guessed letters, number of mistakes, and win/loss state.
@@ -69,7 +69,7 @@ The JavaScript logic is driven by level objects that store both a `word` and a `
 - Game-state driven rendering
 - Dynamic keyboard generation and input handling
 - Viewport-based sizing for a less crowded desktop layout
-- Media queries for responsive behavior on smaller screens
+- Stable desktop layout with reserved UI space for hints and controls
 - Separate files for maintainability and cleaner project structure
 
 ## Project Structure
