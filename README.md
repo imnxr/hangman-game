@@ -72,6 +72,33 @@ hangman-game/
 `- .github/workflows/deploy-pages.yml
 ```
 
+## Recommended Screenshots
+
+For a stronger portfolio presentation, add these images to the repository and include them in your GitHub project or portfolio website:
+
+1. Main gameplay screen
+Show the clean 16:9 game layout with the word board, hangman scene, and keyboard visible.
+
+2. Hint unlocked state
+Show a level after 4 wrong guesses so the hint panel is visible.
+
+3. Losing state
+Show the final red stickman fail state to highlight visual feedback and game-state transitions.
+
+4. Mobile responsive view
+Show the stacked layout on a phone-sized screen to demonstrate responsiveness.
+
+Recommended filenames:
+
+- `screenshot-desktop.png`
+- `screenshot-hint.png`
+- `screenshot-loss.png`
+- `screenshot-mobile.png`
+
+Recommended cover image text:
+
+`100-level Hangman web game built with HTML, CSS, and JavaScript`
+
 ## Technical Highlights
 
 - Level content is stored in structured data objects with both `word` and `hint` values
@@ -99,6 +126,14 @@ This repository demonstrates:
 - State management for interactive gameplay
 - Clean separation of concerns across HTML, CSS, and JavaScript
 - Product thinking beyond a minimal tutorial-level implementation
+
+## Showcase Tips
+
+- Use the desktop gameplay screen as the GitHub social preview or project cover image
+- Put the live demo link near the top of your portfolio card or case study
+- Mention the 100-level progression because it makes the project sound more substantial
+- Highlight that the project was built with vanilla JavaScript rather than a framework
+- If you record a short demo, show the hint unlock and fail-state color change
 
 ## Recommended GitHub Settings
 
