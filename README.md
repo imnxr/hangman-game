@@ -1,26 +1,57 @@
 # Hangman Game
 
-A polished browser-based Hangman project built for portfolio showcase, featuring a 100-level progression system, responsive 16:9 layout, clue letters, unlockable hints, and a clean SVG hangman scene.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Responsive](https://img.shields.io/badge/Responsive-16%3A9%20Game%20Layout-4A63F4?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+A portfolio-ready browser game built with HTML, CSS, and JavaScript. This project turns the classic Hangman idea into a more polished experience with a 100-level progression system, responsive widescreen layout, SVG-based visuals, starter clue letters, and unlockable hints.
 
 ## Live Demo
 
 [Play the game](https://imnxr.github.io/hangman-game/)
 
-Note: the first GitHub Pages deployment can take a couple of minutes after the workflow runs.
+If GitHub Pages was just enabled, the first deployment can take a few minutes to appear.
 
-## Overview
+## Project Summary
 
-This project is a modern HTML5 Hangman game designed to feel like a complete web game rather than a basic coding exercise. It starts with short easy words and gradually scales up to longer, trickier vocabulary across 100 levels. Each round reveals one or more starter letters, and a hint appears after 4 wrong guesses to help the player recover.
+This project was built to showcase front-end fundamentals through a complete mini game rather than a simple static page. The focus was on making the experience feel production-minded: structured game state, scalable level data, responsive layout behavior, separate code files, and a cleaner visual presentation suitable for a public portfolio.
 
-## Features
+## Why This Project Stands Out
+
+- Expands a familiar game concept into a 100-level playable experience
+- Uses progressive difficulty instead of random word selection
+- Includes a real gameplay loop with win, loss, retry, and level advancement states
+- Separates structure, styling, and logic into maintainable files
+- Adapts the interface for desktop, tablet, and mobile screens
+- Uses SVG for a crisp hangman scene without relying on images or canvas
+
+## Core Features
 
 - 100 hand-ordered levels with increasing difficulty
-- Easy, Medium, Hard, and Complex word tiers
-- SVG hangman drawing with a red fail state on loss
-- Responsive layout for desktop, tablet, and mobile screens
-- External `HTML`, `CSS`, and `JavaScript` structure
-- Keyboard input support plus on-screen letter controls
+- Four difficulty tiers: Easy, Medium, Hard, and Complex
+- Starter clue letters revealed at the beginning of each level
+- Hint system that unlocks after 4 wrong guesses
+- Red fail state when the player loses
+- Keyboard input support and on-screen controls
 - Retry system that keeps the player on the same level after a loss
+- Responsive 16:9 desktop presentation with stacked mobile layout
+
+## Gameplay
+
+1. Start a level and inspect the visible clue letters.
+2. Guess the hidden word one letter at a time.
+3. Avoid reaching 6 wrong guesses.
+4. Use the hint that appears after 4 mistakes.
+5. Clear the level to move to the next word.
+
+## Difficulty Progression
+
+- Levels 1-25: 3 to 4 letter easy words
+- Levels 26-50: 5 to 6 letter medium words
+- Levels 51-75: 7 to 8 letter hard words
+- Levels 76-100: 9+ letter complex words
 
 ## Tech Stack
 
@@ -28,6 +59,26 @@ This project is a modern HTML5 Hangman game designed to feel like a complete web
 - CSS3
 - Vanilla JavaScript
 - SVG for the hangman illustration
+- GitHub Pages for deployment
+- GitHub Actions for automated publishing
+
+## Project Structure
+
+```text
+hangman-game/
+|- index.html
+|- style.css
+|- script.js
+`- .github/workflows/deploy-pages.yml
+```
+
+## Technical Highlights
+
+- Level content is stored in structured data objects with both `word` and `hint` values
+- Difficulty is derived from level index rather than a separate random system
+- Rendering is handled through reusable update functions for the board, keyboard, hint, and hangman state
+- Viewport-based sizing keeps the desktop frame shorter and more usable on smaller laptop screens
+- Media queries adjust layout, spacing, keyboard columns, and tile sizing for different devices
 
 ## Controls
 
@@ -35,31 +86,27 @@ This project is a modern HTML5 Hangman game designed to feel like a complete web
 - Press `A-Z` on the physical keyboard to guess
 - Press `Enter` to continue after a win or loss
 
-## How It Works
+## Local Development
 
-1. Start a level and study the already revealed clue letters.
-2. Guess the missing letters before the full hangman is drawn.
-3. After 4 wrong guesses, use the unlocked hint to help finish the word.
-4. Clear the level to move forward, or retry the same level if you lose.
+Open `index.html` directly in a browser, or serve the folder with any static file server.
 
-## Difficulty Progression
+## Portfolio Value
 
-- Levels 1-25: Easy words with 3 to 4 letters
-- Levels 26-50: Medium words with 5 to 6 letters
-- Levels 51-75: Hard words with 7 to 8 letters
-- Levels 76-100: Complex words with 9 or more letters
+This repository demonstrates:
 
-## Portfolio Highlights
+- Front-end UI layout and responsive design
+- DOM manipulation with vanilla JavaScript
+- State management for interactive gameplay
+- Clean separation of concerns across HTML, CSS, and JavaScript
+- Product thinking beyond a minimal tutorial-level implementation
 
-- Designed as a visually clean web game instead of a plain demo
-- Refactored into separate files for maintainability
-- Uses responsive scaling so the game fits smaller viewport heights better
-- Includes structured game state, level progression, and reusable rendering logic
+## Recommended GitHub Settings
 
-## Local Run
+Repository description:
+`A responsive 100-level Hangman web game built with HTML, CSS, and JavaScript.`
 
-Open `index.html` in a browser, or serve the folder with any static file server.
+Homepage URL:
+`https://imnxr.github.io/hangman-game/`
 
-## Suggested GitHub Topics
-
+Suggested topics:
 `hangman`, `html5`, `javascript`, `css`, `browser-game`, `word-game`, `responsive-design`, `portfolio-project`
